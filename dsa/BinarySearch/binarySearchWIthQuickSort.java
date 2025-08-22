@@ -58,7 +58,7 @@ import java.text.DecimalFormat;
         public static int BinarySearch(int[] A,int end, int key){
             int start = 0;
             while(start<=end){
-                int mid = (start+end)/2;
+                int mid = start +(end - start)/2;
                 if (A[mid] == key){
                     return mid;
                 } else if (key>A[mid]) {
