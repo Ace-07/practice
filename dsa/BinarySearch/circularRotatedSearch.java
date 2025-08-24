@@ -16,13 +16,13 @@ import java.text.DecimalFormat;
 
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
-            int[] A = {10,11,12,1,2,3,4,5,6,7};
+            int[] A = {10 , 11 , 12 , 1 , 2 , 3 , 4 , 5};
             int n = A.length;
-            int x = 3;
-            System.out.println(BinarySearch(A,n,x));
+            int x = 10;
+            System.out.println(SortedarrayRotation(A,n,x));
 
         }
-        public static int BinarySearch(int[]A, int n,int x){
+        public static int SortedarrayRotation(int[]A , int n, int x){
             int low = 0;
             int high = n-1;
             while(low<=high){
@@ -31,7 +31,7 @@ import java.text.DecimalFormat;
                     return mid;
                 }
                 if(A[mid]<=A[high]){//case 2: Right half is sorted
-                    if (x >A[mid] && x<= A[low]){
+                    if (x >A[mid] && x<= A[high]){
                         low = mid +1;//go searching in right sorted half
                     }
                     else
@@ -48,9 +48,9 @@ import java.text.DecimalFormat;
             return -1;
         }
     }
+
+
+
 /*
-3
+0
 */
-
-
-
