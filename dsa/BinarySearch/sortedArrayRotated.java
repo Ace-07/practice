@@ -29,10 +29,10 @@ import java.text.DecimalFormat;
                     return low;
                 }
                 int mid = low + (high-low)/2;
-                int next = (mid +1)%n;//we are using module to make sure it will not go out of bound
+                int next = (mid +1)%n;//we are using module to make sure it will not go out of bound.
                 int prev =(mid +n - 1)%n;
-                if (A[mid]<=A[next]&&A[mid]<=A[prev]) {//case 2  if we take an array 10 12 1 2 3 4 and we get 2nd index as mid we can see 1 is less than 12 and also less than 2
-                    return mid;// it is the only element in this array which both next and prev greater than it
+                if (A[mid]<=A[next]&&A[mid]<=A[prev]) {//case 2  if we take an array 10 12 1 2 3 4 and we get 2nd index as mid we can see 1 is less than 12 and also less than 2.
+                    return mid;// it is the only element in this array which both next and prev greater than it.
                 }
                 else if (A[mid]<=A[high]) {//case 3 if mid element is lower than right most it means rest of the index is sorted soo no need to check again
                     high = mid - 1;
