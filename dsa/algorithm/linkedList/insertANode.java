@@ -1,4 +1,4 @@
-import com.sun.source.tree.WhileLoopTree;
+
 
 class LL {
     Node head;
@@ -51,15 +51,29 @@ class LL {
             head = newNode;
             return;
         }
-        Node currNode = head ;
-        Node remaining = head.next;
-        for (int i = 0; i <n-2;i++){
-            currNode=currNode.next;
-            remaining = remaining.next;
+        Node check = head;
+        int count = 0;
+        while(check.next != null){
+            check = check.next;
+            count++;
         }
-        currNode.next =newNode;
-        newNode.next = remaining;
+        if (n-2>count){
+            System.out.println(data+" cant be inserted at "+n+" place");
+            return;
 
+        }
+        else {
+
+
+            Node currNode = head;
+            Node remaining = head.next;
+            for (int i = 0; i < n - 2; i++) {
+                currNode = currNode.next;
+                remaining = remaining.next;
+            }
+            currNode.next = newNode;
+            newNode.next = remaining;
+        }
 
     }
 
@@ -127,6 +141,7 @@ class LL {
         System.out.println(list.listSize());
     }
 }
+
 /*
 this -> is -> a -> list -> Hi google -> NULL
 5
