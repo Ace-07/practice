@@ -57,12 +57,17 @@ class LL {
             check = check.next;
             count++;
         }
-        if (n-2>count){
+        if(n==0 || n== 1){
+            newNode.next = head;
+            head = newNode;
+
+        }
+        else if (n-2>count){
             System.out.println(data+" cant be inserted at "+n+" place");
             return;
 
         }
-        else {
+        else{
 
 
             Node currNode = head;
@@ -133,7 +138,7 @@ class LL {
         list.addFirst("is");
         list.addFirst("this");
         list.addLast("list");
-        list.insert("Hi google",5);
+        list.insert("Hi google",6);
 
 
 
@@ -141,7 +146,6 @@ class LL {
         System.out.println(list.listSize());
     }
 }
-
 /*
 this -> is -> a -> list -> Hi google -> NULL
 5
