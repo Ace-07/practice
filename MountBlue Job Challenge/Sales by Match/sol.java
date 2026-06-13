@@ -1,4 +1,3 @@
-
 public static int sockMerchant(int n, List<Integer> ar) {       
         Map<Integer,Integer>map = new HashMap<>();
         for(int num : ar){
